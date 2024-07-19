@@ -1,0 +1,295 @@
+body{
+      margin: 0px;
+      padding: 0px;
+      background-size: 100% 100%;
+}
+
+.home-container{
+      width: 100%;
+      height: 100vh;
+	overflow: hidden;
+      display: flex;
+}
+
+.sandwich-holder{
+	width: 169%;
+	height: 100%;
+
+      
+      background: #EE4E4E no-repeat;
+      transform: skewX(20deg);
+
+}
+
+.conveyor{
+      width: 3%;
+      margin-left: -1px;
+		   	   
+	transform: skewX(-40deg);
+	transition: width 1.2s ease-in-out;
+      
+}
+
+.pans{
+      background: url("../images/bagget.png") no-repeat;
+      background-size: 100% 100%;
+      width: 100%;
+      height: 10%;
+}
+
+.pansInv{
+      background: url("../images/baggetInv.png") no-repeat;
+      background-size: 100% 100%;
+      width: 100%;
+      height: 10%;
+}
+
+.invLoaf-pans{
+      background: url("../images/toastInv.png") no-repeat;
+      background-size: 100% 100%;
+      width: 100%;
+      height: 10%;
+}
+
+.loaf-pans{
+      background: url("../images/toast.png") no-repeat;
+      background-size: 100% 100%;
+      width: 100%;
+      height: 10%;
+}
+
+.tomatoes{
+      background: url("../images/tomatoes.png") no-repeat;
+      background-size: 100% 100%;
+      width: 100%;
+      height: 10%;
+}
+
+.cheese{
+      background: url("../images/cheese.png") no-repeat;
+      background-size: 100% 100%;
+      width: 100%;
+      height: 10%;
+}
+
+.beacon{
+      background: url("../images/beacon.png") no-repeat;
+      background-size: 100% 100%;
+      width: 100%;
+      height: 10%;
+}
+
+.peperoni{
+      background: url("../images/peperoni.png") no-repeat;
+      background-size: 100% 100%;
+      width: 100%;
+      height: 10%;
+}
+
+.ketchupe{
+      background: url("../images/ketchupe.png") no-repeat;
+      background-size: 100% 100%;
+      width: 100%;
+      height: 10%;
+}
+
+.pickle{
+      background: url("../images/cucumber.png") no-repeat;
+      background-size: 100% 100%;
+      width: 100%;
+      height: 10%;
+}
+
+.peper{
+      background: url("../images/peper.png") no-repeat;
+      background-size: 100% 100%;
+      width: 100%;
+      height: 10%;
+}
+
+.conv-anim-1{
+      width: 100%;
+      height: 100%;
+      animation: scrollR 15s infinite linear;
+}
+
+@keyframes scrollR{
+      from{
+            transform: translateY(0%);
+      }
+      to{
+            transform: translateY(-100%);
+      }
+}
+
+.conv-anim-2{
+      width: 100%;
+      height: 100%;
+      animation: scrollR2 15s infinite linear;
+}
+
+@keyframes scrollR2{
+      from{
+            transform: translateY(0%);
+      }
+      to{
+            transform: translateY(-90%);
+      }
+}
+
+
+.conv-anim-inv-1{
+      width: 100%;
+      height: 100%;
+      animation: scrollInv 15s infinite linear;
+}
+
+@keyframes scrollInv{
+      from{
+            transform: translateY(-90%);
+      }
+      to{
+            transform: translateY(0%);
+      }
+}
+
+.conv-anim-inv-2{
+      width: 100%;
+      height: 100%;
+      animation: scrollInv2 15s infinite linear;
+}
+
+
+@keyframes scrollInv2{
+      from{
+            transform: translateY(-100%);
+      }
+      to{
+            transform: translateY(0%);
+      }
+}
+
+
+.conveyor-1{
+	background: rgb(33, 156, 144);
+      
+}
+
+.conveyor-2{
+	background: rgb(255, 244, 85);
+}
+
+.conveyor-3{
+	background: rgb(255, 199, 0);
+}
+
+.conveyor-4{	
+      background: rgb(238, 78, 78);
+}
+
+.spliter{
+      width: 80%;
+		   
+	overflow: hidden;
+	display: inline-block;
+		   
+	transform: skewX(-40deg);
+	transition: width 1.2s ease-in-out;
+	margin-left: -20%;
+		  
+	background: yellow;
+
+	pointer-events: none;
+}
+
+.master{
+      width: 100%;
+	height: 100%;
+
+      position: absolute;
+      background: #219C90 no-repeat;
+}
+
+.sandwich-png{
+      width: 100%;
+      height: 100%;
+      background-size: 100% 100%;
+      background: url("../images/sandwichpixel.png") no-repeat;
+      background-position-x: -100px;
+      background-position-y: 50px;
+
+}
+
+.sandwich-title{
+      position: absolute;
+
+      color: rgb(255, 244, 85);
+
+      margin-left: 15%;
+      font-family: 'Public Pixel', sans-serif;
+      font-size: 72px;
+
+      display: flex;
+      align-items: center;
+
+      height: 25%;
+      transform: skewX(25deg);
+}
+
+.design-button{
+      border: none;
+      background-color: unset;
+      background-image: url("../images/untouchedButton.png");
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      height: 100%;
+      width: 100%;
+}
+
+.design-button:active{
+      background-image: url("../images/touchedButton.png");
+
+}
+
+a{
+      width: 40%;
+      height: 40%;
+      display: flex;    
+      align-items: center;
+      justify-content: center;
+}
+
+a:visited{
+      width: 40%;
+      height: 40%;
+      color: black;
+
+}
+
+
+.button-holder{
+      position: absolute;
+      height: 100%;
+      width: 30%;
+      display: flex;    
+      align-items: center;
+      margin-left: 40%;
+      background-color: unset;
+}
+
+.design-text{
+      font-size: 34px;
+      font-family: 'Public Pixel', sans-serif;
+      position: absolute;
+      text-decoration: none;
+      text-align: center;
+      padding-left: 2%;
+      pointer-events: none;
+      color: rgb(201, 201, 201);
+}
+
+a:active > .design-text{
+      padding-top: 5%;
+      color: white;
+      text-shadow: white 1px 0 10px;
+}

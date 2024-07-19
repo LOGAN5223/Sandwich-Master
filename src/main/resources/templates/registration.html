@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sandwich Master</title>
+    <link rel="stylesheet" th:href="@{/css/auth.css}">
+    <link rel="icon" th:href="@{/images/sandwich.png}" type="image/x-icon"/>
+    <link rel="bookmark" th:href="@{/images/sandwich.png}" type="image/x-icon"/>
+    
+    
+    <link rel="stylesheet" type="text/css" href="../static/css/auth.css">
+    <link href="https://fonts.cdnfonts.com/css/public-pixel" rel="stylesheet">
+
+</head>
+<body>
+    <div class="background-cont">
+        <div class="reg-pad">
+            <h1 class="colored">Register</h1>
+            <!-- <div th:if="${error}">
+                Unable to login. Check your username and password.
+            </div> -->
+            <p class="colored">
+                <a th:href="@{/login}">Already have an account? Click here to login.</a>
+            </p>
+            <form method="POST" th:action="@{/register}" id="registerForm" class="loginForm">
+                <label for="username" class="colored lb">Username: </label>
+                <input type="text" name="username" class="log-label lb"/><br/>
+    
+                <label for="password" class="colored lb">Password: </label>
+                <input type="password" name="password" class="log-label lb"/><br/>
+    
+                <label for="confirm" class="colored lb">Confirm: </label>
+                <input type="password" name="confirm" class="log-label lb"/><br/>
+    
+                <label for="fullname" class="colored lb">Full name: </label>
+                <input type="text" name="fullname" class="log-label lb"/><br/>
+    
+                <label for="street" class="colored lb">Street: </label>
+                <input type="text" name="street" class="log-label lb"/><br/>
+    
+                <label for="city" class="colored lb">City: </label>
+                <input type="text" name="city" class="log-label lb"/><br/>
+    
+                <label for="state" class="colored lb">State: </label>
+                <input type="text" name="state" class="log-label lb"/><br/>
+    
+                <label for="zip" class="colored lb">Zip: </label>
+                <input type="text" name="zip" class="log-label lb"/><br/>
+    
+                <label for="phone" class="colored lb">Phone: </label>
+                <input type="text" name="phone" class="log-label lb"/><br/>
+    
+                <input type="submit" value="Register" class="log-button"/>
+            </form>
+        </div>
+    </div>
+    <div class="running-ingredients-container">
+        <div class="ingredient-conveyor">
+            <div class="conv-anim">
+                <div class="ingredient-train-1">
+                    <div class="ingredient"></div>
+                    <div class="ingredient"></div>
+                    <div class="ingredient"></div>
+                    <div class="ingredient"></div>
+                    <div class="ingredient"></div>
+                </div>
+                <div class="ingredient-train-2">
+                    <div class="ingredient"></div>
+                    <div class="ingredient"></div>
+                    <div class="ingredient"></div>
+                    <div class="ingredient"></div>
+                    <div class="ingredient"></div>
+                </div>
+            </div>
+        </div>
+        <div class="ingredient-conveyor">
+            <div class="conv-anim-inv">
+                <div class="ingredient-train-1">
+                    <div class="ingredient"></div>
+                    <div class="ingredient"></div>
+                    <div class="ingredient"></div>
+                    <div class="ingredient"></div>
+                    <div class="ingredient"></div>
+                </div>
+                <div class="ingredient-train-2">
+                    <div class="ingredient"></div>
+                    <div class="ingredient"></div>
+                    <div class="ingredient"></div>
+                    <div class="ingredient"></div>
+                    <div class="ingredient"></div>
+                </div>
+            </div>
+        </div>
+        <div class="ingredient-conveyor">
+            <div class="conv-anim">
+                <div class="ingredient-train-1">
+                    <div class="ingredient"></div>
+                    <div class="ingredient"></div>
+                    <div class="ingredient"></div>
+                    <div class="ingredient"></div>
+                    <div class="ingredient"></div>
+                </div>
+                <div class="ingredient-train-2">
+                    <div class="ingredient"></div>
+                    <div class="ingredient"></div>
+                    <div class="ingredient"></div>
+                    <div class="ingredient"></div>
+                    <div class="ingredient"></div>
+                </div>
+            </div>
+        </div>
+        <div class="ingredient-conveyor">
+            <div class="conv-anim-inv">
+                <div class="ingredient-train-1">
+                    <div class="ingredient"></div>
+                    <div class="ingredient"></div>
+                    <div class="ingredient"></div>
+                    <div class="ingredient"></div>
+                    <div class="ingredient"></div>
+                </div>
+                <div class="ingredient-train-2">
+                    <div class="ingredient"></div>
+                    <div class="ingredient"></div>
+                    <div class="ingredient"></div>
+                    <div class="ingredient"></div>
+                    <div class="ingredient"></div>
+                </div>
+            </div>
+        </div>
+        <div class="ingredient-conveyor">
+            <div class="conv-anim">
+                <div class="ingredient-train-1">
+                    <div class="ingredient"></div>
+                    <div class="ingredient"></div>
+                    <div class="ingredient"></div>
+                    <div class="ingredient"></div>
+                    <div class="ingredient"></div>
+                </div>
+                <div class="ingredient-train-2">
+                    <div class="ingredient"></div>
+                    <div class="ingredient"></div>
+                    <div class="ingredient"></div>
+                    <div class="ingredient"></div>
+                    <div class="ingredient"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<script type="text/javascript" th:src="@{/js/login.js}"></script>
+</body>
+</html>
