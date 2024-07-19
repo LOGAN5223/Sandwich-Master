@@ -43,7 +43,7 @@ body{
       height: 100%;
       display: grid;
       grid-template-columns: 50% 50%;
-      grid-row: 10% 25% 25% 25%;
+      grid-template-rows: 10% 25% 25% 25%;
       justify-content: center;
       align-items: center;
 }
@@ -101,7 +101,7 @@ body{
       height: 100%;
       display: grid;
       grid-template-columns: 50% 50%;
-      grid-row: 10% 25% 25% 25%;
+      grid-template-rows: 10% 25% 25% 25%;
       justify-content: center;
       align-items: center;
 }
