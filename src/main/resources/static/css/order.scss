@@ -1,6 +1,8 @@
 body{
       padding: 0;
       margin: 0;
+      font-family: 'Public Pixel', sans-serif;
+      text-align: center;
 }
 
 .all-container{
@@ -19,10 +21,111 @@ body{
       height: 100%;
       grid-row: span 2;
       background: rgb(255, 199, 0);
+      display: grid;
+      grid-template-columns: 80%;
+      grid-template-rows: 10% 5% 15% 30% 20% 5%;
+      justify-content: center;
+      align-content: space-around;
 }
 
 .ingredient-holder{
       width: 100%;
       height: 100%;
       background-size: 100% 100%;
+}
+
+.deliver-text{
+      grid-column: span 2;
+}
+
+.delivery-form{
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-row: 10% 25% 25% 25%;
+      justify-content: center;
+      align-items: center;
+}
+
+.street-holder{
+      width: 100%;
+      height: 100%;
+      grid-column: span 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+.delivery-element{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+}
+
+.colored {
+      background: rgb(238, 78, 78);
+      // width: 30%;
+      height: 30%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+
+.order-title{
+      background: rgb(238, 78, 78);
+      height: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+
+.delivery-input{
+      border: none;
+      background: rgb(255, 244, 85);
+      height: 30%;
+}
+
+.delivery-input:focus{
+      outline: unset;
+}
+
+.pay-form-text{
+      grid-column: span 2;
+}
+
+.pay-form{
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-row: 10% 25% 25% 25%;
+      justify-content: center;
+      align-items: center;
+}
+
+a{
+      text-decoration: none;
+}
+
+a:visited{
+      text-decoration: none;
+}
+
+.order-submit{
+      height: 100%;
+      width: 100%;
+      justify-self: center;
+      align-self: center;
+      font-size: 48px;
+      font-family: 'Public Pixel', sans-serif;
+      background: #EE4E4E;
+      color: rgb(255, 244, 85);
+
+}
+
+.order-submit:active{
+      text-shadow: 3px 3px #000000;
 }

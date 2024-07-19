@@ -17,74 +17,85 @@ xmlns:th="http://www.thymeleaf.org">
             <form method="POST" th:action="@{/orders/process}" th:object="${sandwichOrder}" class="order-form">
                   <h1 class="order-title">Order your sandwich creations!</h1>
 
-                  <a th:href="@{/design}" id="another">Design another sandwich</a><br>
+                  <a th:href="@{/design}" id="another" class="colored">Design another sandwich</a>
+
                   <div class="order-list">
-                        <h3 class="order-list-text">Your sandwichs in this order:</h3>
+                        <h3 class="order-list-text colored">Your sandwiches in this order:</h3>
                         <ul>
-                              <li th:each="sandwich : ${sandwichOrder.sandwiches}">
+                              <li th:each="sandwich : ${sandwichOrder.sandwiches}" class="colored">
                               <span th:text="${sandwich.sandwichName}">sandwich name</span>
                               </li>
                         </ul>
                   </div>
+
                   <div class="delivery-form">
-                        <h3 class="deliver-text">Deliver my taco masterpieces to...</h3>
-                        <label for="delivery_name">Name:</label>
-                        <input type="text" th:field="*{delivery_name}">
-                        <span class="validationError"
-                              th:if="${#fields.hasErrors('delivery_name')}"
-                              th:errors="*{delivery_name}">Name Error</span>
-                        <br>
+                        <h3 class="deliver-text colored">Deliver my sandwiches masterpieces to...</h3>
+                        <div class="delivery-element">
+                              <label for="delivery_name" class="colored">Name:</label>
+                              <input type="text" th:field="*{delivery_name}" class="delivery-input">
+                              <span class="validationError"
+                                    th:if="${#fields.hasErrors('delivery_name')}"
+                                    th:errors="*{delivery_name}">Name Error</span>
+                        </div>
 
-                        <label for="delivery_street">Street address: </label>
-                        <input type="text" th:field="*{delivery_street}"/>
-                        <span class="validationError"
-                              th:if="${#fields.hasErrors('delivery_street')}"
-                              th:errors="*{delivery_street}">Street Error</span>
-                        <br>
+                        <div class="delivery-element">
+                              <label for="delivery_city" class="colored">City: </label>
+                              <input type="text" th:field="*{delivery_city}" class="delivery-input"/>
+                              <span class="validationError"
+                                    th:if="${#fields.hasErrors('delivery_city')}"
+                                    th:errors="*{delivery_city}">City Error</span>
+                        </div>
 
-                        <label for="delivery_city">City: </label>
-                        <input type="text" th:field="*{delivery_city}"/>
-                        <span class="validationError"
-                              th:if="${#fields.hasErrors('delivery_city')}"
-                              th:errors="*{delivery_city}">City Error</span>
-                        <br>
+                        <div class="delivery-element">
+                              <label for="delivery_state" class="colored">State: </label>
+                              <input type="text" th:field="*{delivery_state}" class="delivery-input"/>
+                              <span class="validationError"
+                                    th:if="${#fields.hasErrors('delivery_state')}"
+                                    th:errors="*{delivery_state}">State Error</span>
+                        </div>
 
-                        <label for="delivery_state">State: </label>
-                        <input type="text" th:field="*{delivery_state}"/>
-                        <span class="validationError"
-                              th:if="${#fields.hasErrors('delivery_state')}"
-                              th:errors="*{delivery_state}">State Error</span>
-                        <br>
-
-                        <label for="delivery_zip">Zip code: </label>
-                        <input type="text" th:field="*{delivery_zip}"/>
-                        <span class="validationError"
-                              th:if="${#fields.hasErrors('delivery_zip')}"
-                              th:errors="*{delivery_zip}">Zip Error</span>
-                        <br>
+                        <div class="delivery-element">
+                              <label for="delivery_zip" class="colored">Zip code: </label>
+                              <input type="text" th:field="*{delivery_zip}" class="delivery-input"/>
+                              <span class="validationError"
+                                    th:if="${#fields.hasErrors('delivery_zip')}"
+                                    th:errors="*{delivery_zip}">Zip Error</span>
+                        </div>
+                        <div class="street-holder">
+                              <label for="delivery_street" class="colored">Street address: </label>
+                              <input type="text" th:field="*{delivery_street}" class="delivery-input"/>
+                              <span class="validationError"
+                                    th:if="${#fields.hasErrors('delivery_street')}"
+                                    th:errors="*{delivery_street}">Street Error</span>
+                        </div>
                   </div>
+
                   <div class="pay-form">
-                        <h3 class="pay-form-text">Here’s how I’ll pay...</h3>
-                        <label for="cc_number">Credit Card #: </label>
-                        <input type="text" th:field="*{cc_number}"/>
-                        <span class="validationError" th:if="${#fields.hasErrors('cc_number')}" th:errors="*{cc_number}">CC Num Error</span>
-                        <br>
-
-                        <label for="cc_expiration">Expiration: </label>
-                        <input type="text" th:field="*{cc_expiration}"/>
-                        <span class="validationError"
-                              th:if="${#fields.hasErrors('cc_expiration')}"
-                              th:errors="*{cc_expiration}">CC Num Error</span>
-                        <br>
-
-                        <label for="cc_cvv">CVV: </label>
-                        <input type="text" th:field="*{cc_cvv}"/>
-                        <span class="validationError"
-                              th:if="${#fields.hasErrors('cc_cvv')}"
-                              th:errors="*{cc_cvv}">CC Num Error</span>
-                        <br>
+                        <h3 class="pay-form-text colored">Here’s how I’ll pay...</h3>
+                        <div class="delivery-element">
+                              <label for="cc_number" class="colored">Credit Card #: </label>
+                              <input type="text" th:field="*{cc_number}" class="delivery-input"/>
+                              <span class="validationError" 
+                                    th:if="${#fields.hasErrors('cc_number')}" 
+                                    th:errors="*{cc_number}">CC Num Error</span>
+                        </div>
+                        <div class="delivery-element">
+                              <label for="cc_expiration" class="colored">Expiration: </label>
+                              <input type="text" th:field="*{cc_expiration}" class="delivery-input"/>
+                              <span class="validationError"
+                                    th:if="${#fields.hasErrors('cc_expiration')}"
+                                    th:errors="*{cc_expiration}">CC Num Error</span>
+                        </div>
+                        <div class="delivery-element">
+                              <label for="cc_cvv" class="colored">CVV: </label>
+                              <input type="text" th:field="*{cc_cvv}" class="delivery-input"/>
+                              <span class="validationError"
+                                    th:if="${#fields.hasErrors('cc_cvv')}"
+                                    th:errors="*{cc_cvv}">CC Num Error</span>
+                        </div>            
                   </div>
-                  <input type="submit" value="Submit Order">
+                  
+                  <input type="submit" value="Submit Order" class="order-submit">
             </form>
             <div class="ingredient-holder"></div>
             <div class="ingredient-holder"></div>
