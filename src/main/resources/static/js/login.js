@@ -17,5 +17,5 @@ for(let i = 0; i < 2; i++){
 let ingArr = document.querySelectorAll(".ingredient");
 
 for(let i = 0; i < 50; i++){
-      ingArr[i].style.backgroundImage = "url('../images/" + ingImgArr[Math.floor(Math.random() * (10 - 0) + 0)] + "')";
+      ingArr[i].style.backgroundImage = "url('../images/" + ingImgArr[Math.floor(Math.random() * 10)] + "')";
 }
