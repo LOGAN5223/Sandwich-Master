@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: sandwichCloud
+  thymeleaf:
+    cache: false
+  datasource:
+    name: sandwichcloud
+    username: postgres
+    password: rootroot
+    url: jdbc:postgresql://localhost:5432/sandwichcloud
+    hikari:
+      driver-class-name: org.postgresql.Driver
+  sql:
+    init:
+      mode: always
+      data-locations: classpath:data.sql
+server:
+  port: 8080
+  error:
+    include-exception: true
+    include-stacktrace: always
+

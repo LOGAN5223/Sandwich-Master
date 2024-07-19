@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sandwich Master</title>
+    <link rel="stylesheet" th:href="@{/css/sandwichDesign.css}">
+    <link rel="icon" th:href="@{/images/sandwich.png}" type="image/x-icon"/>
+    <link rel="bookmark" th:href="@{/images/sandwich.png}" type="image/x-icon"/>
+    
+    <link href="https://fonts.cdnfonts.com/css/public-pixel" rel="stylesheet">
+    <script th:src="@{/js/design.js}" defer></script>
+
+</head>
+<body>
+      <form method="POST" th:object="${sandwich}" th:action="@{/design}">    
+            <div class="main-container">
+                  <div class="ingredient-pad">
+                        <p class="ingredient-title">Sandwich Propeties</p>
+                        <input type="text" th:field="*{sandwichName}" class="sandwich-name">
+                        <span class="validationError"
+                              th:if="${#fields.hasErrors('sandwichName')}"
+                              th:errors="*{sandwichName}" style="font-size: 12px; text-align: center;">Name Error</span>
+                        <button class="sandwich-submit">Submit</button>
+                  </div>
+                  <div class="preview">
+                        <div class="loaf-holder ing-holder"></div>
+                        <div class="cheddar-holder ing-holder"></div>
+                        <div class="beacon-holder ing-holder"></div>
+                        <div class="peperoni-holder ing-holder"></div>
+                        <div class="tomatoes-holder ing-holder"></div>
+                        <div class="cucumber-holder ing-holder"></div>
+                        <div class="pepper-holder ing-holder"></div>
+                        <div class="loaf-holder2 ing-holder"></div>
+                  </div>
+                  <div class="ingredient-pad" id="breads">
+                        <p class="ingredient-title">Loaf</p>
+                        <div class="ingredient-container" th:each="ingredient : ${bread}">
+                              <input type="radio" class="ingredient-check absolute" th:field="*{ingredients}" th:value="${ingredient.id}" checked>
+                              <div class="ingredient-img absolute bread-ing" th:style="'background-image:url(' + '../images/' + ${ingredient.img} + ');'">
+                                    <p th:text="${ingredient.name}" class="ingredient-name"></p>
+                              </div>
+                        </div>
+                  </div>
+                  <div class="ingredient-pad" id="cheeses">
+                        <p class="ingredient-title">Cheese</p>
+                        <div class="ingredient-container" th:each="ingredient : ${cheese}">
+                              <input type="checkbox" class="ingredient-check absolute" th:field="*{ingredients}" th:value="${ingredient.id}">
+                              <div class="ingredient-img absolute cheese-ing" th:style="'background-image:url(' + '../images/' + ${ingredient.img} + ');'">
+                                    <p th:text="${ingredient.name}" class="ingredient-name"></p>
+                              </div>
+                        </div>
+                  </div>
+                  <div class="ingredient-pad" id="proteins">
+                        <p class="ingredient-title">Meat & Fish</p>
+                        <div class="ingredient-container" th:each="ingredient : ${protein}">
+                              <input type="checkbox" class="ingredient-check absolute" th:field="*{ingredients}" th:value="${ingredient.id}">
+                              <div class="ingredient-img absolute protein-ing" th:style="'background-image:url(' + '../images/' + ${ingredient.img} + ');'">
+                                    <p th:text="${ingredient.name}" class="ingredient-name"></p>
+                              </div>
+                        </div>
+                  </div>
+                  <div class="ingredient-pad" id="veggies">
+                        <p class="ingredient-title">Vegetables</p>
+                        <div class="ingredient-container" th:each="ingredient : ${veggies}">
+                              <input type="checkbox" class="ingredient-check absolute" th:field="*{ingredients}" th:value="${ingredient.id}">
+                              <div class="ingredient-img absolute veggies-ing" th:style="'background-image:url(' + '../images/' + ${ingredient.img} + ');'">
+                                    <p th:text="${ingredient.name}" class="ingredient-name"></p>
+                              </div>
+                        </div>
+                  </div>            
+                  <div class="ingredient-pad" id="sauces">
+                        <p class="ingredient-title">Sauce</p>
+                        <div class="ingredient-container" th:each="ingredient : ${sauce}">
+                              <input type="checkbox" class="ingredient-check absolute" th:field="*{ingredients}" th:value="${ingredient.id}">
+                              <div class="ingredient-img absolute sauce-ing" th:style="'background-image:url(' + '../images/' + ${ingredient.img} + ');'">
+                                    <p th:text="${ingredient.name}" class="ingredient-name"></p>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </form>
+</body>
+</html>
